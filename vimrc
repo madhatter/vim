@@ -158,6 +158,9 @@ let mapleader = ";"
 "improve autocomplete menu color
 highlight Pmenu ctermbg=238 gui=bold
 
+" SuperTab
+let g:SuperTabDefaultCompletionType = "context"
+
 " automatically set some special behavior
 " ruby standard 2 spaces, always
 au BufRead,BufNewFile *.rb,*.rhtml set shiftwidth=2 
