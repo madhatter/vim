@@ -161,6 +161,17 @@ highlight Pmenu ctermbg=238 gui=bold
 " SuperTab
 let g:SuperTabDefaultCompletionType = "context"
 
+" Syntastic
+let g:syntastic_enable_signs=1  "use signs to tell about syntax error
+let g:syntastic_auto_jump=1 	"jump to the first error after detection
+let g:syntastic_auto_loc_list=1 "automatically open the :Errors window and close it
+let g:syntastic_stl_format = '[%E{Err: %fe #%e}%B{, }%W{Warn: %fw #%w}]'
+" Syntastic statusline enhancements
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+
 " automatically set some special behavior
 " ruby standard 2 spaces, always
 au BufRead,BufNewFile *.rb,*.rhtml set shiftwidth=2 
