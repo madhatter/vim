@@ -176,11 +176,11 @@ set statusline+=%*
 
 " automatically set some special behavior
 " ruby standard 2 spaces, always
-au BufRead,BufNewFile *.rb,*.rhtml set shiftwidth=2 
-au BufRead,BufNewFile *.rb,*.rhtml set softtabstop=2 
-au BufRead,BufNewFile *.rb,*.rhtml set tabstop=2 
-"au BufRead *.rb :so /usr/local/share/vim/vim73/syntax/ruby.vim
-"au BufRead *.rb :so /Users/madhatter/.vim/syntax/ruby.vim
+autocmd FileType ruby,eruby set shiftwidth=2
+autocmd FileType ruby,eruby set softtabstop=2
+autocmd FileType ruby,eruby set tabstop=2
+autocmd FileType ruby,eruby set expandtab
+
 autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
 autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
 autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
