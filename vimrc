@@ -97,6 +97,8 @@ set numberwidth=5
 
 " four spaces are one TAB
 set shiftwidth=4
+set softtabstop=4
+set tabstop=4
 
 " String to put at the start of lines that have been wrapped
 set showbreak=+
@@ -176,6 +178,7 @@ set statusline+=%*
 " ruby standard 2 spaces, always
 au BufRead,BufNewFile *.rb,*.rhtml set shiftwidth=2 
 au BufRead,BufNewFile *.rb,*.rhtml set softtabstop=2 
+au BufRead,BufNewFile *.rb,*.rhtml set tabstop=2 
 "au BufRead *.rb :so /usr/local/share/vim/vim73/syntax/ruby.vim
 "au BufRead *.rb :so /Users/madhatter/.vim/syntax/ruby.vim
 autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
