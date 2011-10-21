@@ -41,6 +41,7 @@ colorscheme solarized
 " text encoding
 " does not work with --enable-multibyte, dunno
 "set encoding=de_DE.UTF-8
+set enc=utf-8
 
 " fast terminal
 set ttyfast 
