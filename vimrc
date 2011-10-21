@@ -206,6 +206,9 @@ au BufRead *.htm,*.html,*.shtml set textwidth=0
 " nope, all beginning with .mutt* automatically please
 au BufRead .mutt* :so /usr/local/share/vim/vim73/syntax/muttrc.vim
 
+" workaround for editing crontabs 
+au BufEnter /private/tmp/crontab.* setl backupcopy=yes
+
 " Umlaute in HTML documents
 autocmd FileType html call Doit()
 function Doit()
