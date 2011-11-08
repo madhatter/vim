@@ -239,3 +239,6 @@ noremap <leader>m <Esc>:CommandTBuffer<CR>
 
 " toggle the taglist
 map <F2> :TlistToggle<CR>
+
+" toogle Gundo window
+nnoremap <F6> :GundoToggle<CR>
