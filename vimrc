@@ -133,7 +133,7 @@ set wildmode=longest,list
 
 " When on, the title of the window will be set to the value of
 " 'titlestring' (if it is not empty)
-set notitle
+set title
 
 " fold on syntax automagically, always
 "set foldmethod=syntax         
@@ -150,7 +150,7 @@ set title titlestring=%<%F\ %M%=%l/%L\ -\ %p%% titlelen=70
 set statusline=[%n][File:%f]%m%=[Row:%l][Col:%c][%p%%]
 
 " Enable compiler support for ruby
-compiler ruby
+"compiler ruby
 
 " use ctags
 set tags=tags;/
@@ -194,7 +194,7 @@ let s:ruby_path = "/Users/madhatter/.rvm/rubies/default/bin/"
 au BufNewFile,BufRead .followup,.article.*,.letter.*,/tmp/mutt-*,nn.*,snd.*,mutt* set tw=72
 
 " Colors in Mails
-au BufNewFile,BufRead /tmp/mutt-* :so /usr/lodal/share/vim/vim73/syntax/mail.vim
+au BufNewFile,BufRead /tmp/mutt-* :so /usr/local/share/vim/vim73/syntax/mail.vim
 
 " Colors for slrn's score-file
 au BufRead .slrn-score :so /usr/local/share/vim/vim73/syntax/slrnsc.vim
@@ -214,13 +214,13 @@ au BufEnter /private/tmp/crontab.* setl backupcopy=yes
 autocmd FileType html call Doit()
 function Doit()
   set textwidth=75 nobackup
-  imap ß &szlig;
-  imap ä &auml;
-  imap Ä &Auml;
-  imap ü &uuml;
-  imap Ü &Uuml;
-  imap ö &ouml;
-  imap Ö &Ouml;
+  imap ÃŸ &szlig;
+  imap Ã¤ &auml;
+  imap Ã„ &Auml;
+  imap Ã¼ &uuml;
+  imap Ãœ &Uuml;
+  imap Ã¶ &ouml;
+  imap Ã– &Ouml;
 endfunction
 
 " remap key Q
@@ -248,3 +248,4 @@ nnoremap <Left> :echoe "Use h"<CR>
 nnoremap <Right> :echoe "Use l"<CR>
 nnoremap <Up> :echoe "Use k"<CR>
 nnoremap <Down> :echoe "Use j"<CR>
+
