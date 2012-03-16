@@ -150,7 +150,7 @@ set title titlestring=%<%F\ %M%=%l/%L\ -\ %p%% titlelen=70
 set statusline=[%n][File:%f]%m%=[Row:%l][Col:%c][%p%%]
 
 " Enable compiler support for ruby
-"compiler ruby
+compiler ruby
 
 " use ctags
 set tags=tags;/
