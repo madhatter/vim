@@ -241,7 +241,7 @@ noremap <leader>m <Esc>:CommandTBuffer<CR>
 map <F2> :TlistToggle<CR>
 
 " toogle Gundo window
-nnoremap <F6> :GundoToggle<CR>
+nnoremap <F7> :GundoToggle<CR>
 
 " Get off my lawn
 nnoremap <Left> :echoe "Use h"<CR>
