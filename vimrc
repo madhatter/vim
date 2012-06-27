@@ -75,9 +75,6 @@ set history=500
 " highlight current line
 set cursorline 
 
-" BUT do highlight as you type you search phrase
-set incsearch  
-                    
 " show statusline
 set laststatus=2
 
@@ -118,6 +115,9 @@ set ignorecase
 
 " please be smart enough to recognize upper case in searches
 set smartcase
+
+" highlight search results as you type
+set hlsearch
 
 " stay away from the bottom line
 set scrolloff=4
