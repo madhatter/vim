@@ -249,3 +249,7 @@ nnoremap <Right> :echoe "Use l"<CR>
 nnoremap <Up> :echoe "Use k"<CR>
 nnoremap <Down> :echoe "Use j"<CR>
 
+"let g:Powerline_theme = 'skwp'
+"let g:Powerline_colorscheme = 'skwp'
+"let g:Powerline_symbols = 'fancy'
+let g:Powerline_symbols = 'unicode'
