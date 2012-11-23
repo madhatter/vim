@@ -280,6 +280,16 @@ nnoremap <F7> :GundoToggle<CR>
 
 " toggle tagbar window
 nmap <F8> :TagbarToggle<CR>
+let g:tagbar_type_ruby = {
+    \ 'kinds' : [
+        \ 'm:modules',
+        \ 'c:classes',
+        \ 'd:describes',
+        \ 'C:contexts',
+        \ 'f:methods',
+        \ 'F:singleton methods'
+    \ ]
+\ }
 
 " Get off my lawn
 nnoremap <Left> :echoe "Use h"<CR>
