@@ -1,5 +1,5 @@
 " pathogen first
-call pathogen#runtime_append_all_bundles()
+call pathogen#infect()
 call pathogen#helptags()
 
 " we want color
