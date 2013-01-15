@@ -21,26 +21,11 @@ let g:solarized_contrast="high"
 let g:solarized_visibility="high"
 colorscheme solarized
 
-" before I used the solarized scheme this was pretty nice 
-"if (&t_Co == 256 || &t_Co == 88) && !has('gui_running') &&
-"      \ filereadable(expand("$HOME/.vim/plugin/guicolorscheme.vim"))
-"      " Use the guicolorscheme plugin to makes 256-color or 88-color
-"      " terminal use GUI colors rather than cterm colors.
-"      runtime! plugin/guicolorscheme.vim
-"      "GuiColorScheme candycode
-"      GuiColorScheme darkspectrum
-"else
-"     " For 8-color 16-color terminals or for gvim, just use the
-"     " regular :colorscheme command.
-"     colorscheme candy
-"endif
-
 " break the line after
 "set textwidth=75
 
 " text encoding
 " does not work with --enable-multibyte, dunno
-"set encoding=de_DE.UTF-8
 set enc=utf-8
 
 " fast terminal
@@ -135,8 +120,10 @@ set wildmode=longest,list
 " 'titlestring' (if it is not empty)
 set title
 
-" fold on syntax automagically, always
-"set foldmethod=syntax         
+" fold on syntax 
+set foldmethod=syntax         
+" but not automagically
+set nofoldenable 
 
 " 2 lines of column for fold showing, always
 set foldcolumn=2              
@@ -169,11 +156,11 @@ let g:syntastic_enable_signs=1  "use signs to tell about syntax error
 let g:syntastic_auto_jump=1 	"jump to the first error after detection
 let g:syntastic_auto_loc_list=1 "automatically open the :Errors window and close it
 let g:syntastic_stl_format = '[%E{Err: %fe #%e}%B{, }%W{Warn: %fw #%w}]'
+
 " Syntastic statusline enhancements
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
-
 
 " automatically set some special behavior
 " ruby standard 2 spaces, always
@@ -188,7 +175,7 @@ autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
 autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
 
 " use ruby 1.9 in vim
-let s:ruby_path = "/Users/madhatter/.rvm/rubies/default/bin/"
+let s:ruby_path = "~/.rvm/rubies/default/bin/"
 
 " Textwidth only for SLRN und Mutt
 au BufNewFile,BufRead .followup,.article.*,.letter.*,/tmp/mutt-*,nn.*,snd.*,mutt* set tw=72
@@ -294,6 +281,7 @@ nnoremap <Right> :echoe "Use l"<CR>
 nnoremap <Up> :echoe "Use k"<CR>
 nnoremap <Down> :echoe "Use j"<CR>
 
+" Powerline options
 "let g:Powerline_theme = 'skwp'
 let g:Powerline_colorscheme = 'skwp'
 "let g:Powerline_symbols = 'fancy'
