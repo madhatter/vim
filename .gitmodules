@@ -43,3 +43,6 @@
 [submodule "bundle/vim-rake"]
 	path = bundle/vim-rake
 	url = git://github.com/tpope/vim-rake.git
+[submodule "bundle/vim-mercenary"]
+	path = bundle/vim-mercenary
+	url = https://github.com/phleet/vim-mercenary.git
