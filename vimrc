@@ -122,11 +122,16 @@ set title
 
 " fold on syntax 
 set foldmethod=syntax         
+
 " but not automagically
 set nofoldenable 
 
 " 2 lines of column for fold showing, always
 set foldcolumn=2              
+
+" split windows appear to the right
+set splitright
+set splitbelow
 
 " Define the look of title
 "set titlestring=%t%(\ %M%)%(\ (%{expand(\"%:~:.:h\")})%)%(\ %a%) 
@@ -149,7 +154,8 @@ let mapleader = ";"
 highlight Pmenu ctermbg=238 gui=bold
 
 " SuperTab
-let g:SuperTabDefaultCompletionType = "context"
+" disabled for now, testing neocomplcache
+"let g:SuperTabDefaultCompletionType = "context"
 
 " Syntastic
 let g:syntastic_enable_signs=1  "use signs to tell about syntax error
@@ -189,6 +195,15 @@ au BufRead .slrn-score :so /usr/local/share/vim/vim73/syntax/slrnsc.vim
 " No Textwidth for HTML 
 au BufRead *.htm,*.html,*.shtml set textwidth=0
 
+function s:setupWrapping()
+  set wrap
+  set wrapmargin=2
+  set textwidth=80
+endfunction
+
+" Make sure all markdown files have the correct filetype set and setup wrapping
+au BufRead,BufNewFile *.{md,markdown,mdown,mkd,mkdn,txt} setf markdown | call s:setupWrapping()
+"
 " Colors for .muttrc and other mutt-related config-files
 " nmap <F9> :so /usr/local/share/vim/vim73/syntax/muttrc.vim<CR>
 " nope, all beginning with .mutt* automatically please
@@ -246,7 +261,10 @@ function Doit()
 endfunction
 
 " remap key Q
-nnoremap Q gq}1G
+nnoremap Q gq
+
+" toggle the current fold
+:nnoremap <Space> za
 
 " keymappings for navigating splitwindows
 map <C-J> <C-W>j<C-W>_
@@ -257,7 +275,11 @@ map <C-L> <C-W>l<C-W>_
 " keymappings for command-t plugin
 noremap <leader>o <Esc>:CommandT<CR>
 noremap <leader>O <Esc>:CommandTFlush<CR>
-noremap <leader>m <Esc>:CommandTBuffer<CR>
+noremap <leader>b <Esc>:CommandTBuffer<CR>
+
+" command-t options
+let g:CommandTMaxHeight=40
+"let g:CommandTAcceptSelectionSplitMap='<C-5>'
 
 " toogle Gundo window
 nnoremap <F7> :GundoToggle<CR>
@@ -282,7 +304,4 @@ nnoremap <Up> :echoe "Use k"<CR>
 nnoremap <Down> :echoe "Use j"<CR>
 
 " Powerline options
-"let g:Powerline_theme = 'skwp'
 let g:Powerline_colorscheme = 'skwp'
-"let g:Powerline_symbols = 'fancy'
-"let g:Powerline_symbols = 'unicode'
