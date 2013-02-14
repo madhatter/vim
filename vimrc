@@ -135,7 +135,7 @@ set splitbelow
 
 " Define the look of title
 "set titlestring=%t%(\ %M%)%(\ (%{expand(\"%:~:.:h\")})%)%(\ %a%) 
-set title titlestring=%<%F\ %M%=%l/%L\ -\ %p%% titlelen=70
+set title titlestring=%<%F\ %M%=%l/%L\ -\ %p%% titlelen=40
 
 " Last - but not least - playing with the statusline
 " See >:h statusline< for more details
@@ -279,6 +279,8 @@ noremap <leader>b <Esc>:CommandTBuffer<CR>
 
 " command-t options
 let g:CommandTMaxHeight=40
+let g:CommandTMaxFiles=50000
+let g:CommandTMaxDepth=10
 "let g:CommandTAcceptSelectionSplitMap='<C-5>'
 
 " toogle Gundo window
