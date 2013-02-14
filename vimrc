@@ -264,7 +264,10 @@ endfunction
 nnoremap Q gq
 
 " toggle the current fold
-:nnoremap <Space> za
+nnoremap <Space> za
+
+" close window
+nnoremap <leader>c :close<CR>
 
 " keymappings for navigating splitwindows
 map <C-J> <C-W>j<C-W>_
@@ -281,7 +284,13 @@ noremap <leader>b <Esc>:CommandTBuffer<CR>
 let g:CommandTMaxHeight=40
 let g:CommandTMaxFiles=50000
 let g:CommandTMaxDepth=10
-"let g:CommandTAcceptSelectionSplitMap='<C-5>'
+
+" disable <C-s> and <C-q> in terminal to make command-t
+" keybindings work
+silent !stty -ixon > /dev/null 2>/dev/null
+
+" toggle paste mode
+nnoremap <leader>p :set invpaste<CR>
 
 " toogle Gundo window
 nnoremap <F7> :GundoToggle<CR>
