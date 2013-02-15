@@ -185,7 +185,9 @@ autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
 let s:ruby_path = "~/.rvm/rubies/default/bin/"
 
 " automagically change the current directory for the file in the active window
-autocmd BufEnter * silent! lcd %:p:h
+" thought that might be a good idea, but what I really need is the root
+" directory of a project...
+"autocmd BufEnter * silent! lcd %:p:h
 
 " Textwidth only for SLRN und Mutt
 au BufNewFile,BufRead .followup,.article.*,.letter.*,/tmp/mutt-*,nn.*,snd.*,mutt* set tw=72
