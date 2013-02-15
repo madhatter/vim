@@ -46,3 +46,6 @@
 [submodule "bundle/vim-mercenary"]
 	path = bundle/vim-mercenary
 	url = https://github.com/phleet/vim-mercenary.git
+[submodule "bundle/vim-ruby-debugger"]
+	path = bundle/vim-ruby-debugger
+	url = git://github.com/astashov/vim-ruby-debugger.git
