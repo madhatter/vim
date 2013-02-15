@@ -150,8 +150,9 @@ set tags=tags;/
 " set the leader
 let mapleader = ";"
 
-"improve autocomplete menu color
-highlight Pmenu ctermbg=238 gui=bold
+" improve autocomplete menu color
+"highlight Pmenu ctermbg=238 gui=bold
+highlight Pmenu ctermbg=White ctermfg=Darkblue gui=bold
 
 " SuperTab
 " disabled for now, testing neocomplcache
@@ -182,6 +183,9 @@ autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
 
 " use ruby 1.9 in vim
 let s:ruby_path = "~/.rvm/rubies/default/bin/"
+
+" automagically change the current directory for the file in the active window
+autocmd BufEnter * silent! lcd %:p:h
 
 " Textwidth only for SLRN und Mutt
 au BufNewFile,BufRead .followup,.article.*,.letter.*,/tmp/mutt-*,nn.*,snd.*,mutt* set tw=72
@@ -259,6 +263,15 @@ function Doit()
   imap ö &ouml;
   imap Ö &Ouml;
 endfunction
+
+" ctag generation for Ruby projects
+" Create tags for all the installed gems for the current activated Ruby (rbenv and rvm are supported). 
+" This takes a very long time to execute, that's why I disabled it. 
+" map rt :!ctags --extra=+f --exclude=.git --exclude=log -R * gem environment gemdir/gems/*
+
+" This does the same thing but scopes the set of gems declared in the Gemfile
+command RefreshTags execute "!bundle list --paths=true | xargs ctags --extra=+f --exclude=.git --exclude=log -R *"
+map <leader>rt :RefreshTags<CR>
 
 " remap key Q
 nnoremap Q gq
