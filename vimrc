@@ -284,6 +284,9 @@ nnoremap <Space> za
 " close window
 nnoremap <leader>c :close<CR>
 
+" kill the buffer
+nnoremap <leader>k :bd<CR>
+
 " keymappings for navigating splitwindows
 map <C-J> <C-W>j<C-W>_
 map <C-K> <C-W>k<C-W>_
@@ -297,8 +300,8 @@ noremap <leader>b <Esc>:CommandTBuffer<CR>
 
 " command-t options
 let g:CommandTMaxHeight=40
-let g:CommandTMaxFiles=50000
-let g:CommandTMaxDepth=10
+let g:CommandTMaxFiles=80000
+let g:CommandTMaxDepth=8
 
 " disable <C-s> and <C-q> in terminal to make command-t
 " keybindings work
