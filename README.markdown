@@ -1,1 +1,1 @@
-![Screenshot](https://github.com/madhatter/dwm/raw/master/screenshot.png "screenshot")
+![Screenshot](https://github.com/madhatter/vim/raw/master/screenshot.png "screenshot")
