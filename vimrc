@@ -21,6 +21,11 @@ let g:solarized_contrast="high"
 let g:solarized_visibility="high"
 colorscheme solarized
 
+" use a simple color scheme for vimdiff
+if &diff
+    colorscheme desert
+endif
+
 " break the line after
 "set textwidth=75
 
