@@ -23,7 +23,7 @@ colorscheme solarized
 
 " use a simple color scheme for vimdiff
 if &diff
-    colorscheme desert
+	colorscheme desert
 endif
 
 " break the line after
@@ -207,9 +207,9 @@ au BufRead .slrn-score :so /usr/local/share/vim/vim73/syntax/slrnsc.vim
 au BufRead *.htm,*.html,*.shtml set textwidth=0
 
 function s:setupWrapping()
-  set wrap
-  set wrapmargin=2
-  set textwidth=80
+	set wrap
+	set wrapmargin=2
+	set textwidth=80
 endfunction
 
 " Make sure all markdown files have the correct filetype set and setup wrapping
@@ -232,13 +232,13 @@ let g:neocomplcache_enable_camel_case_completion = 1
 let g:neocomplcache_enable_underbar_completion = 1
 
 let g:neocomplcache_source_disable = {
-  \ 'syntax_complete': 1,
-\ }
+			\ 'syntax_complete': 1,
+			\ }
 
 let g:neocomplcache_auto_completion_start_length = 2
 
 if !exists('g:neocomplcache_omni_patterns')
-  let g:neocomplcache_omni_patterns = {}
+	let g:neocomplcache_omni_patterns = {}
 endif
 
 let g:neocomplcache_omni_patterns.ruby = '[^. *\t]\.\w*\|\h\w*::'
@@ -261,14 +261,14 @@ endfunction"}}
 " Umlaute in HTML documents
 autocmd FileType html call Doit()
 function Doit()
-  set textwidth=75 nobackup
-  imap ß &szlig;
-  imap ä &auml;
-  imap Ä &Auml;
-  imap ü &uuml;
-  imap Ü &Uuml;
-  imap ö &ouml;
-  imap Ö &Ouml;
+	set textwidth=75 nobackup
+	imap ß &szlig;
+	imap ä &auml;
+	imap Ä &Auml;
+	imap ü &uuml;
+	imap Ü &Uuml;
+	imap ö &ouml;
+	imap Ö &Ouml;
 endfunction
 
 " ctag generation for Ruby projects
@@ -291,6 +291,9 @@ nnoremap <leader>c :close<CR>
 
 " kill the buffer
 nnoremap <leader>k :bd<CR>
+
+" automatically re-indent the whole file and return to current positon
+nnoremap <leader>= mzgg=G`z<CR>
 
 " keymappings for navigating splitwindows
 map <C-J> <C-W>j<C-W>_
@@ -321,15 +324,15 @@ nnoremap <F7> :GundoToggle<CR>
 " toggle tagbar window
 nmap <F8> :TagbarToggle<CR>
 let g:tagbar_type_ruby = {
-    \ 'kinds' : [
-        \ 'm:modules',
-        \ 'c:classes',
-        \ 'd:describes',
-        \ 'C:contexts',
-        \ 'f:methods',
-        \ 'F:singleton methods'
-    \ ]
-\ }
+			\ 'kinds' : [
+			\ 'm:modules',
+			\ 'c:classes',
+			\ 'd:describes',
+			\ 'C:contexts',
+			\ 'f:methods',
+			\ 'F:singleton methods'
+			\ ]
+			\ }
 
 " Get off my lawn
 nnoremap <Left> :echoe "Use h"<CR>
