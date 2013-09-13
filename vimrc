@@ -6,10 +6,10 @@ call pathogen#helptags()
 syntax on
 
 " explicitly get out of vi-compatible mode
-set nocompatible 
+set nocompatible
 
 " don't use local version of .(g)vimrc, .exrc
-set noexrc 
+set noexrc
 
 " I like my background dark
 set background=dark
@@ -34,16 +34,16 @@ endif
 set enc=utf-8
 
 " fast terminal
-set ttyfast 
+set ttyfast
 
 " Enable filetype detection
-filetype on                   
+filetype on
 
 " Enable filetype-specific indenting
-filetype indent on            
+filetype indent on
 
 " Enable filetype-specific plugins
-filetype plugin on            
+filetype plugin on
 
 " Tab are Tab and Spaces are Spaces!
 set noexpandtab
@@ -63,7 +63,7 @@ set viminfo=%100,'100,/100,h,\"500,:100,n~/.viminfo
 set history=500
 
 " highlight current line
-set cursorline 
+set cursorline
 
 " show statusline
 set laststatus=2
@@ -75,13 +75,13 @@ set noerrorbells
 set novisualbell
 
 " turn on line numbers
-"set number 
+"set number
 
 " make it relative numbers
 set relativenumber
 
 " We are good up to 99999 lines
-set numberwidth=5 
+set numberwidth=5
 
 " four spaces are one TAB
 set shiftwidth=4
@@ -91,7 +91,7 @@ set tabstop=4
 " String to put at the start of lines that have been wrapped
 set showbreak=+
 
-" when a bracket is inserted, briefly jump to the matching one (
+" when a bracket is inserted, briefly jump to the matching one
 set showmatch
 
 " display current mode
@@ -112,11 +112,11 @@ set hlsearch
 " stay away from the bottom line
 set scrolloff=4
 
-" enhanced command-line completion 
+" enhanced command-line completion
 set wildmenu
 
 " substitute globally by default
-set gdefault 
+set gdefault
 
 " autocomplete filenames to the longest or show me a list
 set wildmode=longest,list
@@ -125,21 +125,21 @@ set wildmode=longest,list
 " 'titlestring' (if it is not empty)
 set title
 
-" fold on syntax 
-set foldmethod=syntax         
+" fold on syntax
+set foldmethod=syntax
 
 " but not automagically
-set nofoldenable 
+set nofoldenable
 
 " 2 lines of column for fold showing, always
-set foldcolumn=2              
+set foldcolumn=2
 
 " split windows appear to the right
 set splitright
 set splitbelow
 
 " Define the look of title
-"set titlestring=%t%(\ %M%)%(\ (%{expand(\"%:~:.:h\")})%)%(\ %a%) 
+"set titlestring=%t%(\ %M%)%(\ (%{expand(\"%:~:.:h\")})%)%(\ %a%)
 set title titlestring=%<%F\ %M%=%l/%L\ -\ %p%% titlelen=40
 
 " Last - but not least - playing with the statusline
@@ -203,7 +203,7 @@ au BufNewFile,BufRead /tmp/mutt-* :so /usr/local/share/vim/vim73/syntax/mail.vim
 " Colors for slrn's score-file
 au BufRead .slrn-score :so /usr/local/share/vim/vim73/syntax/slrnsc.vim
 
-" No Textwidth for HTML 
+" No Textwidth for HTML
 au BufRead *.htm,*.html,*.shtml set textwidth=0
 
 function s:setupWrapping()
@@ -220,7 +220,7 @@ au BufRead,BufNewFile *.{md,markdown,mdown,mkd,mkdn,txt} setf markdown | call s:
 " nope, all beginning with .mutt* automatically please
 au BufRead .mutt* :so /usr/local/share/vim/vim73/syntax/muttrc.vim
 
-" workaround for editing crontabs 
+" workaround for editing crontabs
 au BufEnter /private/tmp/crontab.* setl backupcopy=yes
 
 " neocomplcache
@@ -272,8 +272,8 @@ function Doit()
 endfunction
 
 " ctag generation for Ruby projects
-" Create tags for all the installed gems for the current activated Ruby (rbenv and rvm are supported). 
-" This takes a very long time to execute, that's why I disabled it. 
+" Create tags for all the installed gems for the current activated Ruby (rbenv and rvm are supported).
+" This takes a very long time to execute, that's why I disabled it.
 " map rt :!ctags --extra=+f --exclude=.git --exclude=log -R * gem environment gemdir/gems/*
 
 " This does the same thing but scopes the set of gems declared in the Gemfile
