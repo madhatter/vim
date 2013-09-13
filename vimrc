@@ -337,5 +337,5 @@ nnoremap <Right> :echoe "Use l"<CR>
 nnoremap <Up> :echoe "Use k"<CR>
 nnoremap <Down> :echoe "Use j"<CR>
 
-" Powerline options
-let g:Powerline_colorscheme = 'skwp'
+" Powerline font options for airline plugin
+let g:airline_powerline_fonts = 1
