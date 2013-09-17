@@ -51,8 +51,9 @@ set noexpandtab
 " use backspace like every other app
 set backspace=2
 
-" no autoident as it messes up everything...
-set noautoindent
+" no autoindent as it messes up everything...
+"set noautoindent
+set autoindent
 
 "  backup options
 set backup
@@ -198,10 +199,10 @@ let s:ruby_path = "~/.rvm/rubies/default/bin/"
 au BufNewFile,BufRead .followup,.article.*,.letter.*,/tmp/mutt-*,nn.*,snd.*,mutt* set tw=72
 
 " Colors in Mails
-au BufNewFile,BufRead /tmp/mutt-* :so /usr/local/share/vim/vim73/syntax/mail.vim
+au BufNewFile,BufRead /tmp/mutt-* :so /usr/local/share/vim/vim74/syntax/mail.vim
 
 " Colors for slrn's score-file
-au BufRead .slrn-score :so /usr/local/share/vim/vim73/syntax/slrnsc.vim
+au BufRead .slrn-score :so /usr/local/share/vim/vim74/syntax/slrnsc.vim
 
 " No Textwidth for HTML
 au BufRead *.htm,*.html,*.shtml set textwidth=0
@@ -216,9 +217,9 @@ endfunction
 au BufRead,BufNewFile *.{md,markdown,mdown,mkd,mkdn,txt} setf markdown | call s:setupWrapping()
 "
 " Colors for .muttrc and other mutt-related config-files
-" nmap <F9> :so /usr/local/share/vim/vim73/syntax/muttrc.vim<CR>
+" nmap <F9> :so /usr/local/share/vim/vim74/syntax/muttrc.vim<CR>
 " nope, all beginning with .mutt* automatically please
-au BufRead .mutt* :so /usr/local/share/vim/vim73/syntax/muttrc.vim
+au BufRead .mutt* :so /usr/local/share/vim/vim74/syntax/muttrc.vim
 
 " workaround for editing crontabs
 au BufEnter /private/tmp/crontab.* setl backupcopy=yes
