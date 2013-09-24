@@ -52,6 +52,3 @@
 [submodule "/home/madhatter/.vim/bundle/vim-airline"]
 	path = bundle/vim-airline
 	url = https://github.com/bling/vim-airline
-[submodule "bundle/vim-ruby-debugger"]
-	path = bundle/vim-ruby-debugger
-	url = git://github.com/astashov/vim-ruby-debugger.git
