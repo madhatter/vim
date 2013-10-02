@@ -320,6 +320,7 @@ silent !stty -ixon > /dev/null 2>/dev/null
 nnoremap <leader>p :set invpaste<CR>
 
 " toogle Gundo window
+let g:gundo_prefer_python3 = 1
 nnoremap <F7> :GundoToggle<CR>
 
 " toggle tagbar window
