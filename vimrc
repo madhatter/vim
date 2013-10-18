@@ -349,5 +349,8 @@ let g:airline_theme = "powerlineish"
 
 " Vdebug options
 " for remote debugging
-let g:vdebug_options = {'path_maps': {"/home/web": $HOME."/workspace/etsuite"}}
-
+let g:vdebug_options= {
+    \    "path_maps" :{"/home/web": $HOME."/workspace/etsuite"},
+    \    "watch_window_style" : 'compact'
+	\}
+"let g:vdebug_options = {'path_maps': {"/home/web": $HOME."/workspace/etsuite"}}
