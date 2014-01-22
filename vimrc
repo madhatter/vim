@@ -129,14 +129,18 @@ set title
 " fold on syntax
 set foldmethod=syntax
 
-" but not automagically
-set nofoldenable
+" enable folding
+set foldenable
 
-" 2 lines of column for fold showing, always
-set foldcolumn=2
+" column width for fold showing, always
+set foldcolumn=1
+
+" open most folds by default
+set foldlevelstart=10
 
 " split windows appear to the right
 set splitright
+" or below the active window
 set splitbelow
 
 " Define the look of title
