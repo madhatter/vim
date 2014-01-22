@@ -55,3 +55,6 @@
 [submodule "bundle/vdebug"]
 	path = bundle/vdebug
 	url = https://github.com/joonty/vdebug.git
+[submodule "bundle/ag.vim"]
+	path = bundle/ag.vim
+	url = https://github.com/rking/ag.vim.git
