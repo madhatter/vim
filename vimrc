@@ -137,6 +137,9 @@ set foldcolumn=1
 
 " open most folds by default
 set foldlevelstart=10
+"
+" 10 nested fold max
+set foldnestmax=10
 
 " split windows appear to the right
 set splitright
