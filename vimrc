@@ -360,4 +360,11 @@ let g:vdebug_options= {
     \    "path_maps" :{"/home/web": $HOME."/workspace/etsuite"},
     \    "watch_window_style" : 'compact'
 	\}
-"let g:vdebug_options = {'path_maps': {"/home/web": $HOME."/workspace/etsuite"}}
+
+" Ag options
+" open ag.vim
+nnoremap <leader>a :Ag 
+" Highlight the search term in the results
+let g:aghighlight=1
+" Ag command line options
+let g:agprg="ag --column --ignore tags --smart-case"
