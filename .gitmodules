@@ -58,3 +58,6 @@
 [submodule "bundle/ag.vim"]
 	path = bundle/ag.vim
 	url = https://github.com/rking/ag.vim.git
+[submodule "bundle/vim-howdoi.git"]
+	path = bundle/vim-howdoi.git
+	url = https://github.com/laurentgoudet/vim-howdoi.git
