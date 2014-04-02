@@ -61,3 +61,6 @@
 [submodule "bundle/vim-howdoi.git"]
 	path = bundle/vim-howdoi.git
 	url = https://github.com/laurentgoudet/vim-howdoi.git
+[submodule "bundle/vim-json"]
+	path = bundle/vim-json
+	url = git@github.com:elzr/vim-json.git
