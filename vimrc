@@ -309,6 +309,10 @@ map <C-K> <C-W>k<C-W>_
 map <C-H> <C-W>h<C-W>_
 map <C-L> <C-W>l<C-W>_
 
+" Move visual block
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
+
 " keymappings for command-t plugin
 noremap <leader>o <Esc>:CommandT<CR>
 noremap <leader>O <Esc>:CommandTFlush<CR>
