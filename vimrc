@@ -355,8 +355,8 @@ nnoremap <Down> :echoe "Use j"<CR>
 
 " Powerline font options for airline plugin
 let g:airline_powerline_fonts = 1
-let g:airline_theme = "powerlineish"
-"let g:airline_theme = "wombat"
+"let g:airline_theme = "powerlineish"
+let g:airline_theme = "badwolf"
 
 " Vdebug options
 " for remote debugging
