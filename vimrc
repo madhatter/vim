@@ -15,11 +15,12 @@ set noexrc
 set background=dark
 
 " change color scheme
-let g:solarized_termtrans=1
-let g:solarized_termcolors=256
-let g:solarized_contrast="high"
-let g:solarized_visibility="high"
-colorscheme solarized
+"let g:solarized_termtrans=1
+"let g:solarized_termcolors=256
+"let g:solarized_contrast="high"
+"let g:solarized_visibility="high"
+"colorscheme solarized
+colorscheme atom-dark-256
 
 " use a simple color scheme for vimdiff
 if &diff
