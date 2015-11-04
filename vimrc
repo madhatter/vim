@@ -21,6 +21,8 @@ set background=dark
 "let g:solarized_visibility="high"
 "colorscheme solarized
 colorscheme atom-dark-256
+"colorscheme lucius
+"LuciusBlackHighContrast
 
 " use a simple color scheme for vimdiff
 if &diff
