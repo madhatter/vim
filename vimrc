@@ -372,9 +372,9 @@ let g:vdebug_options= {
 " open ag.vim
 nnoremap <leader>a :Ag 
 " Highlight the search term in the results
-let g:aghighlight=1
+let g:ag_highlight=1
 " Ag command line options
-let g:agprg="ag --column --ignore tags --smart-case"
+let g:ag_prg="ag --column --ignore tags --smart-case"
 
 "" Unite
 "let g:unite_source_history_yank_enable = 1
