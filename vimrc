@@ -78,14 +78,14 @@ set noerrorbells
 " don't blink
 set novisualbell
 
-" turn on line numbers
-"set number
+" display the absolute line number at the line you're on
+set number
 
 " make it relative numbers
 set relativenumber
 
-" We are good up to 99999 lines
-set numberwidth=5
+" Keep the line number gutter narrow so three digits is cozy.
+set numberwidth=2
 
 " four spaces are one TAB
 set shiftwidth=4
