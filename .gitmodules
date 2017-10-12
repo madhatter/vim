@@ -82,3 +82,6 @@
 [submodule "bundle/vim-arduino"]
 	path = bundle/vim-arduino
 	url = https://github.com/kingbin/vim-arduino.git
+[submodule "bundle/jellybeans-vim"]
+	path = bundle/jellybeans-vim
+	url = https://github.com/nanotech/jellybeans.vim.git

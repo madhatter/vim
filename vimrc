@@ -1,6 +1,7 @@
 " pathogen first
 call pathogen#infect()
 call pathogen#helptags()
+"call pathogen#runtime_append_all_bundles()
 
 " we want color
 syntax on
@@ -14,15 +15,19 @@ set noexrc
 " I like my background dark
 set background=dark
 
+" no wrapping of lines
+set nowrap
+
 " change color scheme
 "let g:solarized_termtrans=1
 "let g:solarized_termcolors=256
 "let g:solarized_contrast="high"
 "let g:solarized_visibility="high"
 "colorscheme solarized
-colorscheme atom-dark-256
-"colorscheme lucius
-"LuciusBlackHighContrast
+
+"colorscheme atom-dark-256
+"colorscheme monokai
+colorscheme jellybeans
 
 " use a simple color scheme for vimdiff
 if &diff
@@ -209,10 +214,10 @@ let s:ruby_path = "~/.rvm/rubies/default/bin/"
 au BufNewFile,BufRead .followup,.article.*,.letter.*,/tmp/mutt-*,nn.*,snd.*,mutt* set tw=72
 
 " Colors in Mails
-au BufNewFile,BufRead /tmp/mutt-* :so /usr/local/share/vim/vim74/syntax/mail.vim
+au BufNewFile,BufRead /tmp/mutt-* :so /usr/local/share/vim/vim80/syntax/mail.vim
 
 " Colors for slrn's score-file
-au BufRead .slrn-score :so /usr/local/share/vim/vim74/syntax/slrnsc.vim
+au BufRead .slrn-score :so /usr/local/share/vim/vim80/syntax/slrnsc.vim
 
 " No Textwidth for HTML
 au BufRead *.htm,*.html,*.shtml set textwidth=0
@@ -227,9 +232,9 @@ endfunction
 au BufRead,BufNewFile *.{md,markdown,mdown,mkd,mkdn,txt} setf markdown | call s:setupWrapping()
 "
 " Colors for .muttrc and other mutt-related config-files
-" nmap <F9> :so /usr/local/share/vim/vim74/syntax/muttrc.vim<CR>
+" nmap <F9> :so /usr/local/share/vim/vim80/syntax/muttrc.vim<CR>
 " nope, all beginning with .mutt* automatically please
-au BufRead .mutt* :so /usr/local/share/vim/vim74/syntax/muttrc.vim
+au BufRead .mutt* :so /usr/local/share/vim/vim80/syntax/muttrc.vim
 
 " workaround for editing crontabs
 au BufEnter /private/tmp/crontab.* setl backupcopy=yes
@@ -364,13 +369,13 @@ let g:airline_theme = "badwolf"
 " Vdebug options
 " for remote debugging
 let g:vdebug_options= {
-    \    "path_maps" :{"/home/web": $HOME."/workspace/etsuite"},
-    \    "watch_window_style" : 'compact'
+	\    "path_maps" :{"/home/web": $HOME."/workspace/etsuite"},
+	\    "watch_window_style" : 'compact'
 	\}
 
 " Ag options
 " open ag.vim
-nnoremap <leader>a :Ag 
+nnoremap <leader>a :Ag
 " Highlight the search term in the results
 let g:ag_highlight=1
 " Ag command line options
