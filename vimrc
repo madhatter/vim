@@ -222,6 +222,9 @@ au BufRead .slrn-score :so /usr/local/share/vim/vim80/syntax/slrnsc.vim
 " No Textwidth for HTML
 au BufRead *.htm,*.html,*.shtml set textwidth=0
 
+" 2 spaces for javascript, like ruby
+au BufRead *.js set sw=2
+
 function s:setupWrapping()
 	set wrap
 	set wrapmargin=2
