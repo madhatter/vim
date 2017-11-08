@@ -192,10 +192,10 @@ set statusline+=%*
 
 " automatically set some special behavior
 " ruby standard 2 spaces, always
-autocmd FileType ruby,eruby,yaml set shiftwidth=2
-autocmd FileType ruby,eruby,yaml set softtabstop=2
-autocmd FileType ruby,eruby,yaml set tabstop=2
-autocmd FileType ruby,eruby,yaml set expandtab
+autocmd FileType ruby,eruby,yaml,javascript set shiftwidth=2
+autocmd FileType ruby,eruby,yaml,javascript set softtabstop=2
+autocmd FileType ruby,eruby,yaml,javascript set tabstop=2
+autocmd FileType ruby,eruby,yaml,javascript set expandtab
 
 autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
 autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
@@ -221,9 +221,6 @@ au BufRead .slrn-score :so /usr/local/share/vim/vim80/syntax/slrnsc.vim
 
 " No Textwidth for HTML
 au BufRead *.htm,*.html,*.shtml set textwidth=0
-
-" 2 spaces for javascript, like ruby
-au BufRead *.js set sw=2
 
 function s:setupWrapping()
 	set wrap
