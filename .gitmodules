@@ -88,3 +88,9 @@
 [submodule "bundle/vim-terraform"]
 	path = bundle/vim-terraform
 	url = https://github.com/hashivim/vim-terraform.git
+[submodule "bundle/jedi-vim"]
+	path = bundle/jedi-vim
+	url = http://github.com/davidhalter/jedi-vim
+[submodule "bundle/vim-yaml-folds"]
+	path = bundle/vim-yaml-folds
+	url = https://github.com/digitalrounin/vim-yaml-folds.git
