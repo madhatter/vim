@@ -236,6 +236,18 @@ au BufRead,BufNewFile *.{md,markdown,mdown,mkd,mkdn,txt} setf markdown | call s:
 " nope, all beginning with .mutt* automatically please
 au BufRead .mutt* :so /usr/local/share/vim/vim80/syntax/muttrc.vim
 
+function s:pythonSettings()
+    set tabstop=4
+    set softtabstop=4
+    set shiftwidth=4
+    set textwidth=80
+    set expandtab
+    set autoindent
+    set fileformat=unix
+endfunction
+
+au BufNewFile,BufRead *.py call s:pythonSettings()
+
 " workaround for editing crontabs
 au BufEnter /private/tmp/crontab.* setl backupcopy=yes
 
