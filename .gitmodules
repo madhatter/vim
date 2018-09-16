@@ -91,6 +91,3 @@
 [submodule "bundle/vim-yaml-folds"]
 	path = bundle/vim-yaml-folds
 	url = https://github.com/digitalrounin/vim-yaml-folds.git
-[submodule "bundle/gotests-vim"]
-	path = bundle/gotests-vim
-	url = https://github.com/buoto/gotests-vim.git
