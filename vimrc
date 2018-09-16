@@ -176,8 +176,9 @@ let mapleader = ";"
 highlight Pmenu ctermbg=White ctermfg=Darkblue gui=bold
 
 " SuperTab
-" disabled for now, testing neocomplcache
-let g:SuperTabDefaultCompletionType = "context"
+" disabled for now, testing complete
+"let g:SuperTabDefaultCompletionType = "context"
+"let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
 
 " Syntastic
 let g:syntastic_enable_signs=1  "use signs to tell about syntax error
@@ -214,10 +215,10 @@ let s:ruby_path = "~/.rvm/rubies/default/bin/"
 au BufNewFile,BufRead .followup,.article.*,.letter.*,/tmp/mutt-*,nn.*,snd.*,mutt* set tw=72
 
 " Colors in Mails
-au BufNewFile,BufRead /tmp/mutt-* :so /usr/local/share/vim/vim80/syntax/mail.vim
+au BufNewFile,BufRead /tmp/mutt-* :so /usr/local/share/vim/vim81/syntax/mail.vim
 
 " Colors for slrn's score-file
-au BufRead .slrn-score :so /usr/local/share/vim/vim80/syntax/slrnsc.vim
+au BufRead .slrn-score :so /usr/local/share/vim/vim81/syntax/slrnsc.vim
 
 " No Textwidth for HTML
 au BufRead *.htm,*.html,*.shtml set textwidth=0
@@ -234,7 +235,7 @@ au BufRead,BufNewFile *.{md,markdown,mdown,mkd,mkdn,txt} setf markdown | call s:
 " Colors for .muttrc and other mutt-related config-files
 " nmap <F9> :so /usr/local/share/vim/vim80/syntax/muttrc.vim<CR>
 " nope, all beginning with .mutt* automatically please
-au BufRead .mutt* :so /usr/local/share/vim/vim80/syntax/muttrc.vim
+au BufRead .mutt* :so /usr/local/share/vim/vim81/syntax/muttrc.vim
 
 function s:pythonSettings()
     set tabstop=4
@@ -250,41 +251,6 @@ au BufNewFile,BufRead *.py call s:pythonSettings()
 
 " workaround for editing crontabs
 au BufEnter /private/tmp/crontab.* setl backupcopy=yes
-
-" neocomplcache
-" {{{
-let g:neocomplcache_enable_at_startup = 1
-let g:neocomplcache_enable_auto_select = 1
-let g:neocomplcache_enable_smart_case = 1
-let g:neocomplcache_enable_camel_case_completion = 1
-let g:neocomplcache_enable_underbar_completion = 1
-
-let g:neocomplcache_source_disable = {
-			\ 'syntax_complete': 1,
-			\ }
-
-let g:neocomplcache_auto_completion_start_length = 2
-
-if !exists('g:neocomplcache_omni_patterns')
-	let g:neocomplcache_omni_patterns = {}
-endif
-
-let g:neocomplcache_omni_patterns.ruby = '[^. *\t]\.\w*\|\h\w*::'
-let g:neocomplcache_omni_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
-let g:neocomplcache_omni_patterns.c = '\%(\.\|->\)\h\w*'
-let g:neocomplcache_omni_patterns.cpp = '\h\w*\%(\.\|->\)\h\w*\|\h\w*::'
-
-" don't show the completion pop up without hitting keys.
-let g:neocomplcache_disable_auto_complete = 1
-
-" use tab for neocomplcache completion
-inoremap <expr><TAB> pumvisible() ? "\<C-n>" : <SID>check_back_space() ? "\<TAB>" : "\<C-x>\<C-u>"
-
-function! s:check_back_space()"{{{
-	let col = col('.') - 1
-	return !col || getline('.')[col - 1] =~ '\s'
-endfunction"}}
-" }}}
 
 " Umlaute in HTML documents
 autocmd FileType html call Doit()

@@ -91,3 +91,6 @@
 [submodule "bundle/vim-yaml-folds"]
 	path = bundle/vim-yaml-folds
 	url = https://github.com/digitalrounin/vim-yaml-folds.git
+[submodule "bundle/completor.vim"]
+	path = bundle/completor.vim
+	url = https://github.com/maralla/completor.vim.git
