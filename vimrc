@@ -19,15 +19,7 @@ set background=dark
 set nowrap
 
 " change color scheme
-"let g:solarized_termtrans=1
-"let g:solarized_termcolors=256
-"let g:solarized_contrast="high"
-"let g:solarized_visibility="high"
-"colorscheme solarized
-
-"colorscheme atom-dark-256
-"colorscheme monokai
-colorscheme jellybeans
+colorscheme molokai
 
 " use a simple color scheme for vimdiff
 if &diff
@@ -38,7 +30,6 @@ endif
 "set textwidth=75
 
 " text encoding
-" does not work with --enable-multibyte, dunno
 set enc=utf-8
 
 " fast terminal
@@ -353,7 +344,7 @@ let g:vdebug_options= {
 
 " Ag options
 " open ag.vim
-nnoremap <leader>a :Ag
+nnoremap <leader>a ":Ag "
 " Highlight the search term in the results
 let g:ag_highlight=1
 " Ag command line options
@@ -377,4 +368,3 @@ let g:ag_prg="ag --column --ignore tags --smart-case"
 "  imap <buffer> <C-j>   <Plug>(unite_select_next_line)
 "  imap <buffer> <C-k>   <Plug>(unite_select_previous_line)
 "endfunction
-
