@@ -26,6 +26,11 @@ if &diff
 	colorscheme desert
 endif
 
+if filereadable(expand("~/.vimrc_background"))
+  let base16colorspace=256
+  source ~/.vimrc_background
+endif
+
 " break the line after
 "set textwidth=75
 
@@ -298,7 +303,7 @@ noremap <leader>b <Esc>:CommandTBuffer<CR>
 " command-t options
 let g:CommandTMaxHeight=40
 let g:CommandTMaxFiles=80000
-let g:CommandTMaxDepth=8
+let g:CommandTMaxDepth=15
 
 " disable <C-s> and <C-q> in terminal to make command-t
 " keybindings work
@@ -344,7 +349,7 @@ let g:vdebug_options= {
 
 " Ag options
 " open ag.vim
-nnoremap <leader>a ":Ag "
+nnoremap <leader>a :Ag<Space>
 " Highlight the search term in the results
 let g:ag_highlight=1
 " Ag command line options
