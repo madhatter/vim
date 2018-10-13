@@ -199,6 +199,10 @@ autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
 autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
 autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
 
+" Update tags file when saving a file
+autocmd FileType java
+	\ autocmd BufWritePost * execute '! if [ -d .git ] || git rev-parse --git-dir > /dev/null 2>&1 ; then ctags --extra=+f --exclude=.git --exclude=log -R *; fi'
+
 " use ruby 1.9 in vim
 let s:ruby_path = "~/.rvm/rubies/default/bin/"
 
