@@ -285,10 +285,10 @@ nnoremap <leader>k :bd<CR>
 nnoremap <leader>= mzgg=G`z<CR>
 
 " keymappings for navigating splitwindows
-map <C-J> <C-W>j<C-W>_
-map <C-K> <C-W>k<C-W>_
-map <C-H> <C-W>h<C-W>_
-map <C-L> <C-W>l<C-W>_
+map <C-J> <C-W>j
+map <C-K> <C-W>k
+map <C-H> <C-W>h
+map <C-L> <C-W>l
 
 " Move visual block
 vnoremap J :m '>+1<CR>gv=gv
