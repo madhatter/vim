@@ -19,16 +19,11 @@ set background=dark
 set nowrap
 
 " change color scheme
-colorscheme molokai
+colorscheme apprentice
 
 " use a simple color scheme for vimdiff
 if &diff
 	colorscheme desert
-endif
-
-if filereadable(expand("~/.vimrc_background"))
-  let base16colorspace=256
-  source ~/.vimrc_background
 endif
 
 " break the line after
@@ -323,15 +318,15 @@ nnoremap <F7> :GundoToggle<CR>
 " toggle tagbar window
 nmap <F8> :TagbarToggle<CR>
 let g:tagbar_type_ruby = {
-			\ 'kinds' : [
-			\ 'm:modules',
-			\ 'c:classes',
-			\ 'd:describes',
-			\ 'C:contexts',
-			\ 'f:methods',
-			\ 'F:singleton methods'
-			\ ]
-			\ }
+	\ 'kinds' : [
+	\ 'm:modules',
+	\ 'c:classes',
+	\ 'd:describes',
+	\ 'C:contexts',
+	\ 'f:methods',
+	\ 'F:singleton methods'
+	\ ]
+	\ }
 
 " Get off my lawn
 nnoremap <Left> :echoe "Use h"<CR>
