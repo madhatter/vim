@@ -88,3 +88,6 @@
 [submodule "bundle/molokai"]
 	path = bundle/molokai
 	url = https://github.com/fatih/molokai.git
+[submodule "bundle/neocomplcache.vim"]
+	path = bundle/neocomplcache.vim
+	url = https://github.com/Shougo/neocomplcache.vim.git

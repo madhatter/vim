@@ -354,21 +354,45 @@ let g:ag_highlight=1
 " Ag command line options
 let g:ag_prg="ag --column --ignore tags --smart-case"
 
-"" Unite
-"let g:unite_source_history_yank_enable = 1
-"call unite#filters#matcher_default#use(['matcher_fuzzy'])
-"nnoremap <leader>o :<C-u>Unite -no-split -buffer-name=files   -start-insert file_rec<cr>
-"nnoremap <leader>f :<C-u>Unite -no-split -buffer-name=files   -start-insert file<cr>
-"nnoremap <leader>r :<C-u>Unite -no-split -buffer-name=mru     -start-insert file_mru<cr>
-"nnoremap <leader>y :<C-u>Unite -no-split -buffer-name=yank    history/yank<cr>
-"nnoremap <leader>b :<C-u>Unite -no-split -buffer-name=buffer  buffer<cr>
-"
-"" Custom mappings for the unite buffer
-"autocmd FileType unite call s:unite_settings()
-"function! s:unite_settings()
-"  " Play nice with supertab
-"  let b:SuperTabDisabled=1
-"  " Enable navigation with control-j and control-k in insert mode
-"  imap <buffer> <C-j>   <Plug>(unite_select_next_line)
-"  imap <buffer> <C-k>   <Plug>(unite_select_previous_line)
-"endfunction
+" neocomplcache
+" {{{
+let g:neocomplcache_enable_at_startup = 1
+let g:neocomplcache_enable_auto_select = 1
+let g:neocomplcache_enable_smart_case = 1
+let g:neocomplcache_enable_camel_case_completion = 1
+let g:neocomplcache_enable_underbar_completion = 1
+
+let g:neocomplcache_source_disable = {
+                       \ 'syntax_complete': 1,
+                       \ }
+
+let g:neocomplcache_auto_completion_start_length = 2
+
+if !exists('g:neocomplcache_omni_patterns')
+       let g:neocomplcache_omni_patterns = {}
+endif
+
+let g:neocomplcache_omni_patterns.ruby = '[^. *\t]\.\w*\|\h\w*::'
+let g:neocomplcache_omni_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
+let g:neocomplcache_omni_patterns.c = '\%(\.\|->\)\h\w*'
+let g:neocomplcache_omni_patterns.cpp = '\h\w*\%(\.\|->\)\h\w*\|\h\w*::'
+
+" omni functions {{{
+if !exists('g:neocomplcache_omni_functions')
+	let g:neocomplcache_omni_functions = {}
+endif
+
+" Go (plugin: gocode)
+let g:neocomplcache_omni_functions.go = 'gocomplete#Complete'
+
+" don't show the completion pop up without hitting keys.
+let g:neocomplcache_disable_auto_complete = 1
+
+" use tab for neocomplcache completion
+inoremap <expr><TAB> pumvisible() ? "\<C-n>" : <SID>check_back_space() ? "\<TAB>" : "\<C-x>\<C-u>"
+
+function! s:check_back_space()"{{{
+       let col = col('.') - 1
+       return !col || getline('.')[col - 1] =~ '\s'
+endfunction"}}
+" }}}
