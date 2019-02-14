@@ -290,6 +290,39 @@ map <C-K> <C-W>k
 map <C-H> <C-W>h
 map <C-L> <C-W>l
 
+" bindings for the quickfix window
+map <C-n> :cnext<CR>
+map <C-m> :cprevious<CR>
+nnoremap <leader>q :cclose<CR>
+
+" go go go
+"
+let g:go_fmt_command = "goimports"
+"let g:go_highlight_types = 1
+"let g:go_highlight_fields = 1
+"let g:go_highlight_functions = 1
+"let g:go_highlight_function_calls = 1
+"let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
+
+" run :GoBuild or :GoTestCompile based on the go file
+function! s:build_go_files()
+  let l:file = expand('%')
+  if l:file =~# '^\f\+_test\.go$'
+    call go#test#Test(0, 1)
+  elseif l:file =~# '^\f\+\.go$'
+    call go#cmd#Build(0)
+  endif
+endfunction
+
+autocmd FileType go nmap <leader>B :<C-u>call <SID>build_go_files()<CR>
+autocmd FileType go nmap <leader>R  <Plug>(go-run)
+autocmd FileType go nmap <leader>T  <Plug>(go-test)
+autocmd FileType go nmap <Leader>C <Plug>(go-coverage-toggle)
+
+" Easier shortcut for autocompletion
+imap <C-J> <C-X><C-O>
+
 " Move visual block
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
