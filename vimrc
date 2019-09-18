@@ -36,7 +36,7 @@ set enc=utf-8
 set ttyfast
 
 " Enable filetype detection
-filetype on
+"filetype on
 
 " Enable filetype-specific indenting
 filetype indent on
@@ -45,14 +45,17 @@ filetype indent on
 filetype plugin on
 
 " Tab are Tab and Spaces are Spaces!
-set noexpandtab
+"set noexpandtab
+
+" No Tabs anywhere!
+set expandtab
 
 " use backspace like every other app
 set backspace=2
 
 " no autoindent as it messes up everything...
 "set noautoindent
-set autoindent
+set smartindent
 
 "  backup options
 set backup
@@ -196,7 +199,7 @@ autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
 
 " Update tags file when saving a file
 autocmd FileType java
-	\ autocmd BufWritePost * execute '! if [ -d .git ] || git rev-parse --git-dir > /dev/null 2>&1 ; then ctags --extra=+f --exclude=.git --exclude=log -R *; fi'
+	\ autocmd BufWritePost * execute '! if [ -d .git ] || git rev-parse --git-dir > /dev/null 2>&1 ; then ctags --extras=+f --exclude=.git --exclude=log -R *; fi'
 
 " use ruby 1.9 in vim
 let s:ruby_path = "~/.rvm/rubies/default/bin/"
@@ -266,7 +269,7 @@ endfunction
 " map rt :!ctags --extra=+f --exclude=.git --exclude=log -R * gem environment gemdir/gems/*
 
 " This does the same thing but scopes the set of gems declared in the Gemfile
-command RefreshTags execute "!bundle list --paths=true | xargs ctags --extra=+f --exclude=.git --exclude=log -R *"
+command RefreshTags execute "!bundle list --paths=true | xargs ctags --extras=+f --exclude=.git --exclude=log -R *"
 map <leader>rt :RefreshTags<CR>
 
 " remap key Q
@@ -415,11 +418,14 @@ if !exists('g:neocomplcache_omni_functions')
 	let g:neocomplcache_omni_functions = {}
 endif
 
+" Indent Guides settings
+let g:indent_guides_enable_on_vim_startup = 1
+
 " Go (plugin: gocode)
 let g:neocomplcache_omni_functions.go = 'gocomplete#Complete'
 
 " don't show the completion pop up without hitting keys.
-let g:neocomplcache_disable_auto_complete = 1
+"let g:neocomplcache_disable_auto_complete = 1
 
 " use tab for neocomplcache completion
 inoremap <expr><TAB> pumvisible() ? "\<C-n>" : <SID>check_back_space() ? "\<TAB>" : "\<C-x>\<C-u>"
