@@ -88,12 +88,12 @@
 [submodule "bundle/molokai"]
 	path = bundle/molokai
 	url = https://github.com/fatih/molokai.git
-[submodule "bundle/neocomplcache.vim"]
-	path = bundle/neocomplcache.vim
-	url = https://github.com/Shougo/neocomplcache.vim.git
 [submodule "bundle/vim-indent-guides"]
 	path = bundle/vim-indent-guides
 	url = https://github.com/nathanaelkane/vim-indent-guides.git
 [submodule "bundle/vim-startify"]
 	path = bundle/vim-startify
 	url = git@github.com:mhinz/vim-startify.git
+[submodule "bundle/YouCompleteMe"]
+	path = bundle/YouCompleteMe
+	url = git@github.com:ycm-core/YouCompleteMe.git

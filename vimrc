@@ -307,6 +307,8 @@ let g:go_fmt_command = "goimports"
 "let g:go_highlight_function_calls = 1
 "let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
+let g:go_def_mode='gopls'
+let g:go_info_mode='gopls'
 
 " run :GoBuild or :GoTestCompile based on the go file
 function! s:build_go_files()
@@ -390,45 +392,8 @@ let g:ag_highlight=1
 " Ag command line options
 let g:ag_prg="ag --column --ignore tags --smart-case"
 
-" neocomplcache
-" {{{
-let g:neocomplcache_enable_at_startup = 1
-let g:neocomplcache_enable_auto_select = 1
-let g:neocomplcache_enable_smart_case = 1
-let g:neocomplcache_enable_camel_case_completion = 1
-let g:neocomplcache_enable_underbar_completion = 1
-
-let g:neocomplcache_source_disable = {
-                       \ 'syntax_complete': 1,
-                       \ }
-
-let g:neocomplcache_auto_completion_start_length = 2
-
-if !exists('g:neocomplcache_omni_patterns')
-       let g:neocomplcache_omni_patterns = {}
-endif
-
-let g:neocomplcache_omni_patterns.ruby = '[^. *\t]\.\w*\|\h\w*::'
-let g:neocomplcache_omni_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
-let g:neocomplcache_omni_patterns.c = '\%(\.\|->\)\h\w*'
-let g:neocomplcache_omni_patterns.cpp = '\h\w*\%(\.\|->\)\h\w*\|\h\w*::'
-
-" omni functions {{{
-if !exists('g:neocomplcache_omni_functions')
-	let g:neocomplcache_omni_functions = {}
-endif
-
 " Indent Guides settings
-let g:indent_guides_enable_on_vim_startup = 1
-
-" Go (plugin: gocode)
-let g:neocomplcache_omni_functions.go = 'gocomplete#Complete'
-
-" don't show the completion pop up without hitting keys.
-"let g:neocomplcache_disable_auto_complete = 1
-
-" use tab for neocomplcache completion
-inoremap <expr><TAB> pumvisible() ? "\<C-n>" : <SID>check_back_space() ? "\<TAB>" : "\<C-x>\<C-u>"
+"let g:indent_guides_enable_on_vim_startup = 1
 
 function! s:check_back_space()"{{{
        let col = col('.') - 1
