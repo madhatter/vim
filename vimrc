@@ -377,6 +377,9 @@ let g:airline_powerline_fonts = 1
 "let g:airline_theme = "powerlineish"
 let g:airline_theme = "badwolf"
 
+" Ignore some files in ctags generation
+let g:vim_tags_ignore_files = ['.gitignore', '.svnignore', '.cvsignore', '*.js', '*.json', '*.css']
+
 " Vdebug options
 " for remote debugging
 let g:vdebug_options= {
