@@ -100,3 +100,6 @@
 [submodule "bundle/vim-gutentags"]
 	path = bundle/vim-gutentags
 	url = git@github.com:ludovicchabant/vim-gutentags.git
+[submodule "bundle/palenight-vim"]
+	path = bundle/palenight-vim
+	url = https://github.com/drewtempelmeyer/palenight.vim.git

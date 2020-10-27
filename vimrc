@@ -19,7 +19,9 @@ set background=dark
 set nowrap
 
 " change color scheme
-colorscheme apprentice
+"colorscheme apprentice
+colorscheme palenight
+let g:palenight_terminal_italics=1
 
 " use a simple color scheme for vimdiff
 if &diff
@@ -72,7 +74,7 @@ set history=500
 set laststatus=2
 
 " be quiet
-set noerrorbells
+set belloff=all
 
 " don't blink
 set novisualbell
@@ -375,7 +377,8 @@ nnoremap <Down> :echoe "Use j"<CR>
 " Powerline font options for airline plugin
 let g:airline_powerline_fonts = 1
 "let g:airline_theme = "powerlineish"
-let g:airline_theme = "badwolf"
+"let g:airline_theme = "badwolf"
+let g:airline_theme = "palenight"
 
 " Ignore some files in ctags generation
 let g:vim_tags_ignore_files = ['.gitignore', '.svnignore', '.cvsignore', '*.js', '*.json', '*.css']
