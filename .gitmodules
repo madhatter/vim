@@ -88,9 +88,6 @@
 [submodule "bundle/vim-startify"]
 	path = bundle/vim-startify
 	url = git@github.com:mhinz/vim-startify.git
-[submodule "bundle/YouCompleteMe"]
-	path = bundle/YouCompleteMe
-	url = git@github.com:ycm-core/YouCompleteMe.git
 [submodule "bundle/vim-gutentags"]
 	path = bundle/vim-gutentags
 	url = git@github.com:ludovicchabant/vim-gutentags.git
