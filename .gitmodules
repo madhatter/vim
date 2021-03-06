@@ -94,3 +94,6 @@
 [submodule "bundle/palenight-vim"]
 	path = bundle/palenight-vim
 	url = https://github.com/drewtempelmeyer/palenight.vim.git
+[submodule "bundle/rust.vim"]
+	path = bundle/rust.vim
+	url = git@github.com:rust-lang/rust.vim.git
