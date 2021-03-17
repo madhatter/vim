@@ -328,6 +328,10 @@ autocmd FileType go nmap <leader>R  <Plug>(go-run)
 autocmd FileType go nmap <leader>T  <Plug>(go-test)
 autocmd FileType go nmap <Leader>C <Plug>(go-coverage-toggle)
 
+" Rust stuff
+set hidden
+let g:racer_cmd = "/home/awarnecke/.cargo/bin/racer"
+
 " Easier shortcut for autocompletion
 imap <C-J> <C-X><C-O>
 
