@@ -4,7 +4,8 @@ call pathogen#helptags()
 "call pathogen#runtime_append_all_bundles()
 
 " we want color
-syntax on
+"syntax on
+syntax enable
 
 " explicitly get out of vi-compatible mode
 set nocompatible
