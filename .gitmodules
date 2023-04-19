@@ -17,7 +17,7 @@
 	path = bundle/gundo.vim
 	url = http://github.com/sjl/gundo.vim.git
 [submodule "bundle/markdown"]
-	path = bundle/markdown
+	path = pack/syntax/start/markdown
 	url = https://github.com/tpope/vim-markdown.git
 [submodule "bundle/vim-powerline"]
 	path = bundle/vim-powerline
@@ -103,3 +103,6 @@
 [submodule "bundle/vim-toml"]
 	path = bundle/vim-toml
 	url = git@github.com:cespare/vim-toml.git
+[submodule "pack/syntax/start/vim-hcl"]
+	path = pack/syntax/start/vim-hcl
+	url = https://github.com/jvirtanen/vim-hcl.git
