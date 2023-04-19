@@ -29,6 +29,13 @@ if &diff
 	colorscheme desert
 endif
 
+" vim hardcodes background color erase even if the terminfo file does
+" not contain bce (not to mention that libvte based terminals
+" incorrectly contain bce in their terminfo files). This causes
+" incorrect background rendering when using a color theme with a
+" background color.
+let &t_ut=''
+
 " break the line after
 "set textwidth=75
 
@@ -349,6 +356,7 @@ noremap <leader>b <Esc>:CommandTBuffer<CR>
 let g:CommandTMaxHeight=40
 let g:CommandTMaxFiles=80000
 let g:CommandTMaxDepth=15
+let g:CommandTPreferredImplementation='ruby'
 
 " disable <C-s> and <C-q> in terminal to make command-t
 " keybindings work
